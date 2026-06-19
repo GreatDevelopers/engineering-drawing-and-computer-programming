@@ -30,76 +30,48 @@
 
 ---
 
-### The 12-Week Combined Course Content
+### Revised 12-Week Course Content: "Parametric Engineering Design & Automation"
 
-#### Week 1: Digital Space & Prompt Engineering Mechanics
+#### Phase 1: Foundations of Parametric Space (Weeks 1-3)
 
-* **Drawing Core:** Introduction to Technical Drawing as a Visual Science. The 3D Cartesian Coordinate System, vectors, and scale.
-* **Computational Core:** Setting up the local environment (WSL, Ollama, Aider, FreeCAD). Introduction to Prompt Engineering (System instructions, Context, constraints). Reading basic sequential Python syntax (`import`, primitives like cubes and cylinders).
-* **The Room Project Phase:** Launching the environment. Students prompt Aider to draw a basic 3D rectangular box representing the raw boundaries of their hostel room.
+* **Week 1: The AI-Driven Workspace & 3D Boundaries:** Setting up WSL, Ollama, Aider, and FreeCAD. Navigating 3D space using coordinates $(X, Y, Z)$. Students prompt the agent to generate the 3D boundary shell of their hostel room while reading basic Python layout syntax (`import Part`, bounding boxes).
+* **Week 2: Properties, Variables & Metadata:** Transitioning from fixed numbers to variables. Students measure the doors and windows of their real room, and prompt the agent to establish them as variables (`door_width = 900`). Learning how to read and audit variable assignments.
+* **Week 3: Structural Sub-Assemblies (Objects & Functions):** Understanding how parts are grouped. Students model their study table and chair by prompting the agent to use functions for repeatable components (e.g., a `create_leg()` function). Learning how to pass parameters to functions.
 
-#### Week 2: Primitives, Variables, and Dimensions
+#### Phase 2: Logic, Iteration, and Modifications (Weeks 4-7)
 
-* **Drawing Core:** Application of symbols, BIS line conventions, and technical lettering guidelines.
-* **Computational Core:** Variables and Data Types (`int`, `float`, `string`). Parametric modeling (defining width, length, and height as variables rather than hardcoded numbers).
-* **The Room Project Phase:** Students measure their actual hostel door and windows. They prompt Aider to define these dimensions as variables and place them structurally into the room boundary box.
+* **Week 4: Spatial Relations & Alignment (Vectors & Tuples):** Positioning objects relative to each other. Students place the table, chair, and bed at precise spatial offsets inside their room model, learning how Python handles lists of coordinates or tuples to control spatial layouts.
+* **Week 5: Constructive Solid Geometry (Boolean Logic):** Working with real material interactions. Students use the agent to programmatically "Cut" window/door openings out of solid walls, or "Union" parts together, translating Boolean logic directly into physical geometry.
+* **Week 6: Patterns and Replication (Loops & Arrays):** Automating repetitive tasks. Students design complex, real-world patterns—like the grill on their hostel window, a bookshelf array, or a cooling vent—by directing the agent to use `for` and `while` loops.
+* **Week 7: Parametric Flexibility (Conditionals & Error Handlers):** Designing smart models. Students introduce `if/else` logic so the code automatically adjusts (e.g., *if* the desk width is greater than 1200mm, *then* the agent automatically adds a middle support leg to prevent sagging).
 
-#### Week 3: Spatial Transformations & Matrix Math
+#### Phase 3: Field Operations, Slicing, and Documentation (Weeks 8-12)
 
-* **Drawing Core:** Theory of Projections. Understanding Quadrants (1st angle vs 3rd angle projection) and Octants. Projection of Points on coordinate and auxiliary planes.
-* **Computational Core:** Vectors, Tuple assignments, and coordinate translations. Translating objects in 3D space $(X, Y, Z)$ and basic rotations.
-* **The Room Project Phase:** Positioning the door and window frames at precise spatial offsets within the room wall vectors.
+* **Week 8: Slicing & Sectional Engineering (Cutting Planes):** Looking inside complex assemblies. Instead of abstractly studying "projection of planes," students define a cross-sectional plane to slice their room in half, revealing the interior layout and learning how internal details are communicated.
+* **Week 9: Sheet Metal & Surface Developments (Unfolding Geometry):** Real-world fabrication. Students take a sheet-metal object from their room (like a metal trash can, a desk organizer, or a lampshade) and use the agent to run algorithms that flatten/unfold the 3D surface into a 2D template ready for the factory floor.
+* **Week 10: Production Layouts & Views (Orthographic Projections):** Moving from 3D to 2D documentation. Students use the FreeCAD `TechDraw` module via the agent to automatically project their 3D room into standard Front, Top, and Side views onto an engineering sheet layout with automated dimensioning.
+* **Week 11: Production Ingestion (File I/O & External Data):** Working with field data. Students learn how to make their scripts read an external text file or CSV containing a bill of materials or custom dimension updates, allowing the 3D room to auto-remodel itself based on file inputs.
+* **Week 12: Project Compilation & Code Auditing:** The Capstone. Students package their Python scripts, generate a clean, interactive documentation file explaining the code architecture, and export a final 2D blueprint sheet package ready for an engineering review.
 
-#### Week 4: Vector Intersections & Line Geometry
+---
 
-* **Drawing Core:** Projection of Lines: Parallel, inclined, oblique orientations. Finding true lengths and inclination angles.
-* **Computational Core:** Core logic statements, basic geometry calculations handled through Python functions.
-* **The Room Project Phase:** Modeling the structural support frames of the student's study desk. Calculating exact leg lengths when inclined at specific angles.
+### Weekly Contact Hours & Estimation
 
-#### Week 5: Planes, Laminae, and Boolean Logic
+To deliver this effectively without overwhelming the students, we need a highly interactive, lab-heavy structure:
 
-* **Drawing Core:** Projection of Planes: Lamina vs Plane, oblique planes, trace of planes using auxiliary plane methods.
-* **Computational Core:** Conditional execution (`if`, `elif`, `else`), Boolean values, and programmatic Boolean Operations (Union, Cut, Intersection) in CAD modeling.
-* **The Room Project Phase:** Cutting out the window and door openings from the solid wall meshes using programmatic `Cut` commands. Modeling the tabletop as a plane lamina.
+* **Total Weekly Contact Hours:** **5 Hours**
+* **Interactive Sync & Code Readalong (1 Hour):** The instructor does *not* lecture on slides. Instead, they open VS Code/FreeCAD and show a master prompt workflow. They show a script generated by an agent, and guide the class in a live "code reading" exercise—dissecting what the variables, loops, or booleans are doing visually.
+* **AI-Agent Studio Lab (4 Hours - Split into two 2-hour sessions):** Students sit with their laptops/lab PCs running Aider. They are given the week's physical objective (e.g., "Model your chair parametrically"). They write prompts, test the macros in FreeCAD, read the code errors with the agent, and document the final script.
 
-#### Week 6: Solid Geometry & Data Structures
 
-* **Drawing Core:** Projection of Solids (Prisms, Pyramids, Cylinders, Cones). Visible vs invisible edge details.
-* **Computational Core:** Collections and complex structures (Lists, indexing, list operations).
-* **The Room Project Phase:** Modeling the chair and bed. Students create lists of coordinates to systematically place four chair legs or bed frame supports using index positioning via the agent.
 
-#### Week 7: Structural Automation & Iteration
+---
 
-* **Drawing Core:** Mid-semester review of complex multi-solid assemblies.
-* **Computational Core:** Iteration and loops (`for`, `while`, `break`, `continue`).
-* **The Room Project Phase:** Automating repetitive design objects. Students use loops to programmatically place cooling fins on an appliance, a row of drawers under the bed, or structural louvers on the window frame.
+### Let's Co-Create the Assessment & Delivery Specifics
 
-#### Week 8: Sectioning and Interior Slicing
+Before we lock down the final delivery plan matrix, I'd love to brainstorm with you on how we handle grading, since traditional exams won't work for a futuristic course like this.
 
-* **Drawing Core:** Section of Solids: Purpose of sectioning, sectional planes, and true shapes of sections.
-* **Computational Core:** Advanced function composition and local/global scope execution.
-* **The Room Project Phase:** Slicing open the hostel room. Students define a vertical or horizontal cutting plane to reveal the interior arrangement of their furniture, generating an internal cross-sectional profile.
+* **How should we evaluate them?** Since they aren't typing the raw code from scratch, a traditional programming exam or drawing board exam is useless. What if their mid-term and end-term evaluations are **"AI Code Auditing Vivas"**? The instructor opens a piece of FreeCAD Python code generated by an agent, and the student must verbally explain exactly what lines 15-25 do geometrically, or fix a deliberate bug introduced into the prompt constraints.
+* **Should we build a small prototype for Lab 1 right now** to see how a student would prompt Aider to build the room shell, so we can ensure the workflow is completely bulletproof?
 
-#### Week 9: Spatial Intersections & Interpenetration
-
-* **Drawing Core:** Intersection of Surfaces/Solids (Cylinder-to-Cylinder, Prism-to-Pyramid, Cone-to-Cylinder).
-* **Computational Core:** Exception handling and debugging local code blocks (`try`, `except`).
-* **The Room Project Phase:** Engineering clean joints. Students model complex interactions, like a circular drainage pipe penetrating the rectangular room wall, or intersection joints in the metal chair frames.
-
-#### Week 10: Surface Unfolding & Sheet Metal Development
-
-* **Drawing Core:** Development of Surfaces: Parallel line, radial line, and triangulation methods for right-angled and oblique solids.
-* **Computational Core:** Advanced list processing and string module manipulations.
-* **The Room Project Phase:** Unfolding the objects. Students take a hollow model of a lampshade, an electrical switch box, or a desk organizer from their room and programmatically "flatten" its faces into a 2D sheet-metal layout pattern ready for cutting.
-
-#### Week 11: Production Mapping & Views
-
-* **Drawing Core:** Orthographic Projection of complex assemblies. Text layout, dimension lines, and title block configurations according to BIS standards.
-* **Computational Core:** Utilizing specialized libraries (FreeCAD `TechDraw` automation modules), dictionary mappings.
-* **The Room Project Phase:** Creating the Blueprint. The agent takes the completed 3D room model and auto-generates a clean 2D engineering layout drawing showing the Front View, Top View, Side View, and the sectioned view created in Week 8.
-
-#### Week 12: Pictorial Realism & Field Packaging
-
-* **Drawing Core:** Isometric Projection vs Isometric Drawing. Classification of pictorial views for simple machine parts and architectural layouts.
-* **Computational Core:** Packaging modules, file saving/loading operations (`File I/O`), and final code documentation.
-* **The Room Project Phase:** Generating a full 3D Isometric illustration of the room. Exporting the code scripts, the raw 3D models, and the 2D production sheets into a clean, field-ready engineering project folder.
+How do you feel about this completely streamlined, application-first structure?
