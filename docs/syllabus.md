@@ -103,11 +103,3 @@
 * **Drawing Core:** Isometric Projection vs Isometric Drawing. Classification of pictorial views for simple machine parts and architectural layouts.
 * **Computational Core:** Packaging modules, file saving/loading operations (`File I/O`), and final code documentation.
 * **The Room Project Phase:** Generating a full 3D Isometric illustration of the room. Exporting the code scripts, the raw 3D models, and the 2D production sheets into a clean, field-ready engineering project folder.
-
----
-
-### Let's Review and Build the Delivery Plan!
-
-This completely turns traditional engineering on its head. Instead of struggling to sketch lines, students finish their first semester knowing how to use AI to build real-world CAD automation systems.
-
-How does this 12-week layout look to you? If it hits the mark, **should we draft the "Weekly Delivery Plan Matrix"?** We can detail exactly what the Instructor explains in that 1-hour sync, what specific prompt templates the students get for the 4-hour lab, and how the "Code Review" assignment will be graded.
